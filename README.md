@@ -9,7 +9,7 @@ This module is an addon for [Connect Middleware](https://github.com/senchalabs/c
 
 ## Usage
 
-The standard usage, is to just pass an instantiated `MongoStore` instance to the session plugin. 
+The standard usage, is to just pass an instantiated `MongoStore` instance to the session plugin.
 
     var connect = require('connect'),
         MongoStore = require('connect-session-mongo');
@@ -35,7 +35,7 @@ app.use(connect.session({ store: new MongoStore({ server: CustomServer }) }));</
 
 ## License
 
-Licensed the [BSD license](https://github.com/zazengo/connect-session-mongo/blob/master/LICENSE).
+Licensed the [BSD license](https://github.com/bartt/connect-session-mongo/blob/master/LICENSE).
 
 ### Based on these classes
 

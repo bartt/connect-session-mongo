@@ -1,10 +1,10 @@
 {
   "name": "connect-session-mongo",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "MongoDB Session Store for Connect Middleware",
-  "author": "Bart Teeuwisse <bart@zazengo.com>",
+  "author": "Bart Teeuwisse <bart@thecodemill.biz>",
   "contributors": ["Dav Glass <davglass@gmail.com>"],
-  "bugs": { "web" : "http://github.com/zazengo/connect-session-mongo/issues" },
+  "bugs": { "web" : "http://github.com/bartt/connect-session-mongo/issues" },
   "os": ["darwin", "linux"],
   "engines": {
     "node" : ">=0.2.0"
@@ -20,11 +20,11 @@
   "licenses":[
     {
       "type" : "BSD",
-      "url" : "http://github.com/zazengo/connect-session-mongo/blob/master/LICENSE"
+      "url" : "http://github.com/bartt/connect-session-mongo/blob/master/LICENSE"
     }
   ],
   "repository": {
     "type":"git",
-    "url":"http://github.com/zazengo/connect-session-mongo.git"
+    "url":"http://github.com/bartt/connect-session-mongo.git"
   }
 }
