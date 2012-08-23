@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/bartt/connect-session-mongo.png)](http://travis-ci.org/bartt/connect-session-mongo)
 # MongoDB Session Storage for Connect Middleware
 
 This module is an addon for [Connect Middleware](https://github.com/senchalabs/connect) that adds a new [Session Storage device](https://github.com/senchalabs/connect/blob/master/docs/session.md).
