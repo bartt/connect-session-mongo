@@ -31,12 +31,12 @@ You can also pass several options to the constructor to tweak your session store
 * server - A custom mongo Server instance (this overides db, ip &amp; port)
 * url - A url to use for Db.connect style database connections (this overrides db, ip, port &amp; server)
 
+An optional callback function(err, connectedDb) can also be passed to the constructor after the options.
+
 <pre><code>var CustomServer = new Server(123.456.789.1, 12345, { auto_reconnect: true }, {});
 app.use(connect.session({ store: new MongoStore({ server: CustomServer }) }));</code></pre>
 
-## License
-
-Licensed the [BSD license](https://github.com/bartt/connect-session-mongo/blob/master/LICENSE).
+<pre><code>app.use(connect.session({url: process.env.MONGO_URL}, function(err,db) {if (err) {throw err;}}));</code></pre>
 
 ### Based on these classes
 
