@@ -27,15 +27,18 @@ You can also pass several options to the constructor to tweak your session store
 * db - The name of the db to use, defaults to: `connect-sessions`
 * ip - The IP address of the server to connect to, defaults to: `127.0.0.1`
 * port - The Port to connect to, defaults to: `27017`
-* collection - The collection to save it's data to, defaults to: `sessions`
-* server - A custom mongo Server instance (this overides db, ip &amp; port):
+* collection - The collection to save its data to, defaults to: `sessions`
+* server - A custom mongo Server instance (this overides db, ip &amp; port)
+* url - A url to use for Db.connect style database connections (this overrides db, ip, port &amp; server)
+* reapInterval - Time to wait (ms) before removing aged session documents (default 10min)
+* reapAge - Age (ms) at which session documents become subject to reaping (default 8hr)
+
+An optional callback function(err, connectedDb) can also be passed to the constructor after the options.
 
 <pre><code>var CustomServer = new Server(123.456.789.1, 12345, { auto_reconnect: true }, {});
 app.use(connect.session({ store: new MongoStore({ server: CustomServer }) }));</code></pre>
 
-## License
-
-Licensed the [BSD license](https://github.com/bartt/connect-session-mongo/blob/master/LICENSE).
+<pre><code>app.use(connect.session({url: process.env.MONGO_URL}, function(err,db) {if (err) {throw err;}}));</code></pre>
 
 ### Based on these classes
 
